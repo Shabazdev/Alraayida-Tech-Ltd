@@ -9,7 +9,7 @@ import Technology from '../../Components/Technology/Technology';
 import Ourwork from '../../Components/OurWorks/Ourwork';
 
 import ClientTestimonials from '../../Components/ClientTestimonials/ClientTestimonials';
-import AnimatedCursor from '../../components/AnimatedCursor';
+import AnimatedCursor from '../../Components/AnimatedCursor';
 import DevFAQ from '../Services/DevFAQ/DevFAQ';
 
 const Home = () => {
