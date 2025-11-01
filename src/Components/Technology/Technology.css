@@ -1,0 +1,39 @@
+.animated-border {
+  position: relative;
+  z-index: 0;
+}
+
+.animated-border::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  z-index: -1;
+  background: linear-gradient(270deg, #0f0f0f, #2a2a2a, #555555, #ffffff20, #0f0f0f);
+  background-size: 400% 400%;
+  border-radius: 1rem;
+  animation: borderPulse 12s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.05));
+  opacity: 0.35;
+}
+
+/* Optional: disable animation on very small devices */
+@media (max-width: 640px) {
+  .animated-border::before {
+    display: none;
+  }
+}
+
+@keyframes borderPulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

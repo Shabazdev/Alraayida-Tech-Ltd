@@ -1,0 +1,33 @@
+.fire-hover-text {
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  display: inline-block;
+}
+
+/* Realistic smoke shimmer on hover */
+.fire-hover-text:hover {
+  background: radial-gradient(circle at 30% 40%, #ffffff, #cccccc, #888888, transparent);
+  background-size: 250% 250%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: smokeFlow 3s ease-in-out infinite;
+  filter: blur(0.5px) drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+  opacity: 0.95;
+}
+
+@keyframes smokeFlow {
+  0% {
+    background-position: 0% 50%;
+    filter: blur(0.2px);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: blur(0.8px);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: blur(0.2px);
+  }
+}

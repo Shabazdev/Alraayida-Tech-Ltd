@@ -1,0 +1,33 @@
+.border-animated {
+    position: relative;
+    background: linear-gradient(135deg, #00f0ff, #0055ff, #8e2de2, #ff6ec4, #00f0ff);
+    background-size: 300% 300%;
+    animation: borderMove 6s ease infinite;
+    border-radius: 1rem;
+  }
+  
+  .border-animated::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: inherit;
+    border-radius: inherit;
+    filter: blur(12px);
+  }
+  
+  @keyframes borderMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

@@ -1,0 +1,22 @@
+@keyframes borderAnimation {
+    0% {
+      border-color: #6b7280; /* Gray */
+    }
+    25% {
+      border-color: #4c51bf; /* Indigo */
+    }
+    50% {
+      border-color: #3b82f6; /* Blue */
+    }
+    75% {
+      border-color: #9333ea; /* Purple */
+    }
+    100% {
+      border-color: #6b7280; /* Gray */
+    }
+  }
+  
+  .parent-border-animated {
+    animation: borderAnimation 3s infinite; /* Adjust the timing to control animation speed */
+  }
+  
